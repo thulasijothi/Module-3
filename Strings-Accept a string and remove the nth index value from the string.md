@@ -2,21 +2,34 @@
 # 🧹 Strings-Remove Nth Index Character from a String
 
 ## 🎯 Aim
-To write a Python program that accepts a string and removes the character at a specified index.
+Write a python function that accepts a string and removes the 3rd index value from the string.
 
 ## 🧠 Algorithm
-1. Define a function named `remove` that takes the input string as an argument.
-2. Read the index `n` from the user input.
-3. Initialize an empty string `a` to store the new string.
-4. Iterate over each index of the string using a `for` loop.
-5. Check if the current index `i` is not equal to `n`.
-6. If `i != n`, append the character at index `i` to string `a`.
-7. After the loop, return the modified string `a`.
-8. Print the final result.
+1.Start
+2.Input: Accept a string s.
+3.Check String Length:
+   If the length of s is less than or equal to 3:
+   Return the string as-is (since index 3 doesn’t exist).
+4.Else:
+  Proceed to the next step.
+  Remove Character at Index 3:
+5.Use slicing:
+  s[:3] gets characters from index 0 to 2.
+  s[4:] gets characters from index 4 to the end.
+  Concatenate the two slices: s[:3] + s[4:].
+6.Return the modified string.
+7.End
 
 ## 💻 Program
-Add Code Here
+def remove(text):
+    if len(text)>3:
+        new=text[:3]+text[4:]
+    else:
+        new=text
+    print(new)
 
 ## Output
+![image](https://github.com/user-attachments/assets/178519b8-4ab5-4d1d-a8f1-8b8273953eab)
 
 ## Result
+This python function that accepts a string and removes the 3rd index value from the string is successfully executed.
